@@ -403,8 +403,10 @@ article.post {
         @extend .inner;
       }
       &--full {
-        margin-bottom: 1rem;
-        margin-top: 1rem;
+        @include media("min", "md") {
+          margin-bottom: 1rem;
+          margin-top: 1rem;
+        }
 
         max-width: unset;
       }
