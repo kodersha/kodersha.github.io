@@ -1,0 +1,224 @@
+.post-teaser {
+  position: relative;
+
+  &.tag-archive {
+    position: relative;
+
+    padding-bottom: calc(var(--gap) / 2.5);
+    padding-top: calc(var(--gap) / 2.5);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+
+      width: 100vw;
+      right: 50%;
+      left: 50%;
+
+      max-width: unset;
+      display: block;
+
+      margin-right: -50vw;
+      margin-left: -50vw;
+
+      border-top: 1px dashed var(--color-line);
+    }
+
+    &::after {
+      bottom: -0.5px;
+    }
+
+    &::before {
+      top: -0.5px;
+    }
+
+    & > a {
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--body-text-color);
+
+      display: inline-block;
+
+      @include media("min", "md") {
+        font-size: 1.25rem;
+      }
+
+      @include media("max", "md") {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        color: var(--color-link);
+      }
+    }
+  }
+
+  &:not(.tag-archive) {
+    position: relative;
+
+    margin-bottom: var(--gap);
+    margin-top: unset;
+
+    @include media("min", "md") {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    display: grid;
+    gap: var(--gap);
+
+    figure {
+      position: relative;
+
+      @include media("min", "md") {
+        -webkit-transition: transform .5s ease;
+        -moz-transition: transform .5s ease;
+        transition: transform .5s ease;
+
+        transform: translateY(0);
+
+        grid-column: span 5;
+      }
+
+      &:hover {
+        @include media("min", "md") {
+          transform: translateY(-0.5rem);
+        }
+      }
+
+      a {
+        position: relative;
+
+        aspect-ratio: 16/9 auto;
+
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        background-color: var(--color-black);
+
+        img {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          top: 0;
+
+          @extend .goo;
+
+          object-fit: cover;
+        }
+      }
+    }
+
+    & > div {
+      position: relative;
+
+      @include media("min", "md") {
+        grid-column: span 7;
+      }
+
+      & > * {
+        margin-bottom: var(--teaser-margin);
+        margin-top: var(--teaser-margin);
+
+        &:last-child {
+          margin-bottom: unset !important;
+        }
+
+        &:first-child {
+          margin-top: unset !important;
+        }
+      }
+
+      h2 {
+        margin-bottom: calc(var(--teaser-margin) / 1.5);
+
+        font-weight: var(--article-title-font-weight);
+        font-size: calc(var(--article-title-font-size) - 0.5rem);
+
+        & + * {
+          margin-top: calc(var(--teaser-margin) / 1.5) !important;
+        }
+      }
+
+      p {
+        position: relative;
+
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        display: -webkit-box;
+
+        word-break: break-word;
+        overflow-y: hidden;
+
+        font-size: calc(var(--article-font-size) - 0.15rem);
+        line-height: var(--article-line-height);
+        color: var(--color-description);
+
+        a {
+          display: block;
+        }
+      }
+
+      nav {
+        a {
+          position: relative;
+          transform: translateY(-1px);
+
+          @extend .fit-content;
+          @extend .tag-colors;
+
+          display: block;
+
+          font-weight: 500;
+          line-height: 1;
+
+          @include media("min", "md") {
+            font-size: 1.125rem;
+          }
+          @include media("max", "md") {
+            font-size: 1rem;
+          }
+
+          &::after {
+            -webkit-transition: opacity .2s ease, left .2s ease;
+            -moz-transition: opacity .2s ease, left .2s ease;
+            transition: opacity .2s ease, left .2s ease;
+
+            position: relative;
+            content: '\203A';
+
+            opacity: 0;
+            left: 0;
+          }
+
+          &:hover {
+            &::after {
+              -webkit-transition: opacity .2s ease, left .2s ease;
+              -moz-transition: opacity .2s ease, left .2s ease;
+              transition: opacity .2s ease, left .2s ease;
+
+              opacity: 1;
+              left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
