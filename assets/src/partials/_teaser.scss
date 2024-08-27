@@ -61,12 +61,12 @@
     margin-bottom: var(--gap);
     margin-top: unset;
 
+    display: grid;
+    gap: var(--gap);
+
     @include media("min", "md") {
       grid-template-columns: repeat(12, 1fr);
     }
-
-    display: grid;
-    gap: var(--gap);
 
     figure {
       position: relative;

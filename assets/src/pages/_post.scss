@@ -242,23 +242,23 @@ article.post {
         }
 
         &:first-of-type {
+          margin-top: unset;
+
           @include media("max", "md") {
             padding-top: unset;
             margin-top: unset;
             border-top: none;
           }
-
-          margin-top: unset;
         }
 
         &:last-of-type {
+          margin-bottom: unset;
+
           @include media("max", "md") {
             padding-bottom: unset;
             margin-bottom: unset;
             border-bottom: none;
           }
-
-          margin-bottom: unset;
         }
 
         th,
@@ -266,6 +266,9 @@ article.post {
           font-family: var(--article-font-family);
           font-size: var(--article-font-size);
           line-height: calc(var(--article-line-height) - 0.125);
+
+          vertical-align: baseline;
+          padding: unset;
 
           @include media("min", "md") {
             padding-right: 1rem;
@@ -276,9 +279,6 @@ article.post {
             margin-bottom: calc(var(--article-margin) / 2);
             margin-top: calc(var(--article-margin) / 2);
           }
-
-          vertical-align: baseline;
-          padding: unset;
 
           @include media("min", "md") {
             width: -moz-available;
@@ -375,6 +375,9 @@ article.post {
 
       &,
       & > * {
+        color: var(--color-description);
+        @extend .extend;
+
         @include media("min", "md") {
           font-size: 1.125rem;
           line-height: 1.4;
@@ -388,9 +391,6 @@ article.post {
 
           text-align: left;
         }
-
-        color: var(--color-description);
-        @extend .extend;
       }
     }
 
@@ -403,12 +403,12 @@ article.post {
         @extend .inner;
       }
       &--full {
+        max-width: unset;
+
         @include media("min", "md") {
           margin-bottom: 1rem;
           margin-top: 1rem;
         }
-
-        max-width: unset;
       }
     }
   }
@@ -590,6 +590,12 @@ article.post {
   & > nav.tags {
     position: relative;
 
+    align-items: center;
+    column-gap: 0.5rem;
+    display: flex;
+
+    @extend .user-select-none;
+
     @include media("min", "md") {
       margin-bottom: -0.625rem;
       margin-top: unset;
@@ -598,12 +604,6 @@ article.post {
       margin-bottom: -0.5rem;
       margin-top: unset;
     }
-
-    align-items: center;
-    column-gap: 0.5rem;
-    display: flex;
-
-    @extend .user-select-none;
 
     a {
       position: relative;
@@ -615,16 +615,15 @@ article.post {
       font-weight: 500;
       line-height: 1;
 
+      color: var(--color-tag);
+      @extend .tag-colors;
+
       @include media("min", "md") {
         font-size: 1.125rem;
       }
       @include media("max", "md") {
         font-size: 1rem;
       }
-
-      color: var(--color-tag);
-
-      @extend .tag-colors;
 
       &.tag-archive {
         display: none !important;

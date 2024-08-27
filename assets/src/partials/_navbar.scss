@@ -15,17 +15,17 @@ body > header {
     align-items: center;
     display: flex;
 
+    font-weight: 600;
+    font-size: 1.125rem;
+
+    @extend .user-select-none;
+
     @include media("min", "md") {
       column-gap: 1.5rem;
     }
     @include media("max", "md") {
       column-gap: 0.5rem;
     }
-
-    font-weight: 600;
-    font-size: 1.125rem;
-
-    @extend .user-select-none;
 
     a {
       &:first-of-type {

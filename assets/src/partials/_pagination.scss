@@ -28,20 +28,19 @@ nav.pagination {
 
 nav.post-pagination {
   position: relative;
+  display: flex;
+
+  @extend .user-select-none;
+  @extend .wrapper;
 
   @include media("min", "md") {
-    justify-content: center;
+    justify-content: space-between;
     column-gap: 1rem;
   }
   @include media("max", "md") {
     flex-direction: column;
     row-gap: 0.5rem;
   }
-
-  display: flex;
-
-  @extend .user-select-none;
-  @extend .wrapper;
 
   a {
     font-size: 1.125rem;
