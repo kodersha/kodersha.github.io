@@ -52,13 +52,38 @@ body > footer {
   p.related {
     color: var(--color-description);
 
+    align-items: center;
+    display: flex;
+
+    column-gap: 0.5rem;
+
     @include mixin.media("min", "md") {
+      justify-content: center;
       text-align: center;
       flex: 1;
     }
     @include mixin.media("max", "md") {
       margin-bottom: 1rem;
       order: 1;
+    }
+
+    span {
+      align-items: center;
+      display: flex;
+
+      column-gap: 0.25rem;
+
+      img {
+        position: relative;
+        overflow: hidden;
+
+        border-radius: 50%;
+
+        height: 1.5rem;
+        width: 1.5rem;
+
+        display: flex;
+      }
     }
 
     a {
