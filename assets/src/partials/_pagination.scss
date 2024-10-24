@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../_variables";
+@use "../_mixin";
+
 nav.pagination {
   position: relative;
 
@@ -33,11 +37,11 @@ nav.post-pagination {
   @extend .user-select-none;
   @extend .wrapper;
 
-  @include media("min", "md") {
+  @include mixin.media("min", "md") {
     justify-content: space-between;
     column-gap: 1rem;
   }
-  @include media("max", "md") {
+  @include mixin.media("max", "md") {
     flex-direction: column;
     row-gap: 0.5rem;
   }
@@ -52,12 +56,12 @@ nav.post-pagination {
     }
 
     &:first-of-type {
-      @include media("min", "md") {
+      @include mixin.media("min", "md") {
         text-align: left;
       }
     }
     &:last-of-type {
-      @include media("min", "md") {
+      @include mixin.media("min", "md") {
         text-align: right;
       }
     }

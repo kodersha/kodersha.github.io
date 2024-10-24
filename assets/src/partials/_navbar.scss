@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../_variables";
+@use "../_mixin";
+
 body > header {
   position: relative;
 
@@ -20,10 +24,10 @@ body > header {
 
     @extend .user-select-none;
 
-    @include media("min", "md") {
+    @include mixin.media("min", "md") {
       column-gap: 1.5rem;
     }
-    @include media("max", "md") {
+    @include mixin.media("max", "md") {
       column-gap: 0.5rem;
     }
 

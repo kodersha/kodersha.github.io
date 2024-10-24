@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../_variables";
+@use "../_mixin";
+
 body > footer {
   position: relative;
 
@@ -11,14 +15,14 @@ body > footer {
 
   @extend .fill-available;
 
-  @include media("min", "md") {
+  @include mixin.media("min", "md") {
     justify-content: space-between;
     align-items: center;
     column-gap: 1.5rem;
     flex-wrap: wrap;
   }
 
-  @include media("max", "md") {
+  @include mixin.media("max", "md") {
     flex-direction: column;
     row-gap: 0.5rem;
   }

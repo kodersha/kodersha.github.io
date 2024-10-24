@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../_variables";
+@use "../_mixin";
+
 .post-teaser {
   position: relative;
 
@@ -41,11 +45,11 @@
 
       display: inline-block;
 
-      @include media("min", "md") {
+      @include mixin.media("min", "md") {
         font-size: 1.25rem;
       }
 
-      @include media("max", "md") {
+      @include mixin.media("max", "md") {
         font-size: 1rem;
       }
 
@@ -64,14 +68,14 @@
     display: grid;
     gap: var(--gap);
 
-    @include media("min", "md") {
+    @include mixin.media("min", "md") {
       grid-template-columns: repeat(12, 1fr);
     }
 
     figure {
       position: relative;
 
-      @include media("min", "md") {
+      @include mixin.media("min", "md") {
         -webkit-transition: transform .5s ease;
         -moz-transition: transform .5s ease;
         transition: transform .5s ease;
@@ -82,7 +86,7 @@
       }
 
       &:hover {
-        @include media("min", "md") {
+        @include mixin.media("min", "md") {
           transform: translateY(-0.5rem);
         }
       }
@@ -115,7 +119,7 @@
     & > div {
       position: relative;
 
-      @include media("min", "md") {
+      @include mixin.media("min", "md") {
         grid-column: span 7;
       }
 
@@ -176,10 +180,10 @@
           font-weight: 500;
           line-height: 1;
 
-          @include media("min", "md") {
+          @include mixin.media("min", "md") {
             font-size: 1.125rem;
           }
-          @include media("max", "md") {
+          @include mixin.media("max", "md") {
             font-size: 1rem;
           }
 

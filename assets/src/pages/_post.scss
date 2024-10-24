@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../_variables";
+@use "../_mixin";
+
 article.post {
   position: relative;
 
@@ -197,7 +201,7 @@ article.post {
 
       background-color: var(--code-background-color);
       border-radius: var(--border-radius);
-      border: 1px solid lighten($code-background-color, 10%);
+      border: 1px solid color.adjust(variables.$code-background-color, $lightness: 10%);
 
       display: block;
     }
@@ -209,13 +213,13 @@ article.post {
     border-collapse: collapse;
     width: -moz-available;
 
-    @include media("max", "md") {
+    @include mixin.media("max", "md") {
       display: block;
     }
 
     thead,
     tbody {
-      @include media("max", "md") {
+      @include mixin.media("max", "md") {
         display: block;
       }
 
@@ -223,12 +227,12 @@ article.post {
         margin-bottom: calc(var(--article-margin) / 2);
         margin-top: calc(var(--article-margin) / 2);
 
-        @include media("min", "md") {
+        @include mixin.media("min", "md") {
           display: flex;
           width: -moz-available;
         }
 
-        @include media("max", "md") {
+        @include mixin.media("max", "md") {
           display: block;
 
           margin-bottom: -1px;
@@ -244,7 +248,7 @@ article.post {
         &:first-of-type {
           margin-top: unset;
 
-          @include media("max", "md") {
+          @include mixin.media("max", "md") {
             padding-top: unset;
             margin-top: unset;
             border-top: none;
@@ -254,7 +258,7 @@ article.post {
         &:last-of-type {
           margin-bottom: unset;
 
-          @include media("max", "md") {
+          @include mixin.media("max", "md") {
             padding-bottom: unset;
             margin-bottom: unset;
             border-bottom: none;
@@ -270,29 +274,29 @@ article.post {
           vertical-align: baseline;
           padding: unset;
 
-          @include media("min", "md") {
+          @include mixin.media("min", "md") {
             padding-right: 1rem;
             padding-left: 1rem;
           }
 
-          @include media("max", "md") {
+          @include mixin.media("max", "md") {
             margin-bottom: calc(var(--article-margin) / 2);
             margin-top: calc(var(--article-margin) / 2);
           }
 
-          @include media("min", "md") {
+          @include mixin.media("min", "md") {
             width: -moz-available;
             flex: 1;
           }
 
-          @include media("max", "md") {
+          @include mixin.media("max", "md") {
             display: block;
           }
 
           &:first-of-type {
             padding-left: unset;
 
-            @include media("max", "md") {
+            @include mixin.media("max", "md") {
               margin-top: unset;
             }
           }
@@ -300,7 +304,7 @@ article.post {
           &:last-of-type {
             padding-right: unset;
 
-            @include media("max", "md") {
+            @include mixin.media("max", "md") {
               margin-bottom: unset;
             }
           }
@@ -331,12 +335,12 @@ article.post {
     }
 
     thead {
-      @include media("max", "md") {
+      @include mixin.media("max", "md") {
         display: none;
       }
 
       tr {
-        @include media("min", "md") {
+        @include mixin.media("min", "md") {
           margin-bottom: calc(var(--article-margin) / 2) !important;
         }
 
@@ -347,7 +351,7 @@ article.post {
       }
     }
 
-    @include media("max", "md") {
+    @include mixin.media("max", "md") {
       table,
       tr,
       td,
@@ -378,14 +382,14 @@ article.post {
         color: var(--color-description);
         @extend .extend;
 
-        @include media("min", "md") {
+        @include mixin.media("min", "md") {
           font-size: 1.125rem;
           line-height: 1.4;
 
           text-align: center;
         }
 
-        @include media("max", "md") {
+        @include mixin.media("max", "md") {
           font-size: 1rem;
           line-height: 1.4;
 
@@ -405,7 +409,7 @@ article.post {
       &--full {
         max-width: unset;
 
-        @include media("min", "md") {
+        @include mixin.media("min", "md") {
           margin-bottom: 1rem;
           margin-top: 1rem;
         }
@@ -427,7 +431,7 @@ article.post {
   figure.youtube {
     position: relative;
 
-    @include media("min", "md") {
+    @include mixin.media("min", "md") {
       margin-bottom: var(--gap);
       margin-top: unset;
     }
@@ -501,7 +505,7 @@ article.post {
     .gallery {
       position: relative;
 
-      @include media("min", "md") {
+      @include mixin.media("min", "md") {
         display: grid;
         gap: 1rem;
     
@@ -511,7 +515,7 @@ article.post {
           }
         }
       }
-      @include media("max", "md") {
+      @include mixin.media("max", "md") {
         flex-direction: column;
         row-gap: 1rem;
         display: flex;
@@ -528,7 +532,7 @@ article.post {
       @extend .inner;
 
       .gallery {
-        @include media("min", "md") {
+        @include mixin.media("min", "md") {
           gap: 1.5rem;
         }
       }
@@ -536,13 +540,13 @@ article.post {
     &--full {
       max-width: unset;
 
-      @include media("min", "md") {
+      @include mixin.media("min", "md") {
         margin-bottom: 1rem;
         margin-top: 1rem;
       }
 
       .gallery {
-        @include media("min", "md") {
+        @include mixin.media("min", "md") {
           gap: 2rem;
         }
       }
@@ -596,11 +600,11 @@ article.post {
 
     @extend .user-select-none;
 
-    @include media("min", "md") {
+    @include mixin.media("min", "md") {
       margin-bottom: -0.625rem;
       margin-top: unset;
     }
-    @include media("max", "md") {
+    @include mixin.media("max", "md") {
       margin-bottom: -0.5rem;
       margin-top: unset;
     }
@@ -618,10 +622,10 @@ article.post {
       color: var(--color-tag);
       @extend .tag-colors;
 
-      @include media("min", "md") {
+      @include mixin.media("min", "md") {
         font-size: 1.125rem;
       }
-      @include media("max", "md") {
+      @include mixin.media("max", "md") {
         font-size: 1rem;
       }
 

@@ -1,4 +1,5 @@
-@import "_mixin";
+@use "sass:color";
+@use "_mixin";
 
 $body-background-color:   #000000;
 $body-text-color:         #f7f7f5;
@@ -66,7 +67,7 @@ $color-button:            #612bff;
   --time: .2s;
 }
 
-@include media("max", "md") {
+@include mixin.media("max", "md") {
   :root {
     --body-margin: 1rem;
 
@@ -136,7 +137,7 @@ $color-button:            #612bff;
   a {
     text-decoration-line: underline;
     text-decoration-style: solid;
-    text-decoration-color: transparentize($color-link, 0.8);
+    text-decoration-color: color.adjust($color-link, $alpha: -0.8);
     text-decoration-thickness: 1px;
     text-underline-offset: 0.25rem;
     
@@ -144,14 +145,14 @@ $color-button:            #612bff;
 
     &:hover,
     &.hover {
-      text-decoration-color: transparentize($color-link-hover, 0.8);
+      text-decoration-color: color.adjust($color-link-hover, $alpha: -0.8);
       color: var(--color-link-hover);
     }
   }
 
   code {
     background-color: var(--code-background-color);
-    border: 1px solid lighten($code-background-color, 10%);
+    border: 1px solid color.adjust($code-background-color, $lightness: 10%);
     border-radius: 0.3125rem;
     color: var(--code-text-color);
 

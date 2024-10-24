@@ -1,15 +1,13 @@
-@import "_fonts";
-@import "_reset";
-@import "_variables";
-@import "_buttons";
-@import "_body";
+@use "_fonts";
+@use "_reset";
+@use "_variables";
+@use "_buttons";
+@use "_body";
 
-@import "partials/_navbar";
-@import "partials/_footer";
-@import "partials/_teaser";
-@import "partials/_related";
-@import "partials/_pagination";
+@use "partials/_navbar";
+@use "partials/_footer";
+@use "partials/_teaser";
+@use "partials/_related";
+@use "partials/_pagination";
 
-@import "pages/_post";
-
-@import "plugins/_applause";
+@use "pages/_post";
