@@ -155,6 +155,7 @@ section.introduction {
   }
 }
 
+main.welcome,
 section.welcome {
   position: relative;
 
@@ -163,7 +164,9 @@ section.welcome {
   align-items: center;
   display: flex;
 
-  min-height: 100vh;
+  row-gap: var(--body-margin);
+
+  min-height: calc(100vh - calc(2rem + 1.2rem));
 
   @extend .fill-available;
 
@@ -174,12 +177,14 @@ section.welcome {
 
   p {
     @include mixin.media("min", "md") {
-      font-size: 3rem;
       line-height: 1.5;
+      font-size: 3rem;
+
+      text-align: center;
     }
     @include mixin.media("max", "md") {
-      font-size: 1.5rem;
       line-height: 1.4;
+      font-size: 1.5rem;
     }
 
     a {

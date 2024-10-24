@@ -62,6 +62,9 @@ $color-button:            #612bff;
   --article-item-padding: 1.25rem;
   --article-margin: 2rem;
 
+  --small-font-size: 1.125rem;
+  --small-line-height: 1.5;
+
   --teaser-margin: 1.5rem;
 
   --time: .2s;
@@ -172,7 +175,7 @@ $color-button:            #612bff;
 
 .tag-colors {
   &.tag-archive {
-    color: rgb(148, 148, 148);
+    color: rgb(255, 255, 255);
   }
   &.tag-movies {
     color: rgb(196, 191, 49);
