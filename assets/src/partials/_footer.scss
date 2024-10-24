@@ -24,7 +24,7 @@ body > footer {
 
   @include mixin.media("max", "md") {
     flex-direction: column;
-    row-gap: 0.5rem;
+    row-gap: 1.5rem;
   }
 
   p.copyright {
@@ -36,7 +36,7 @@ body > footer {
       flex: 1;
     }
     @include mixin.media("max", "md") {
-      order: 2;
+      order: 4;
     }
 
     a {
@@ -51,27 +51,27 @@ body > footer {
 
   p.related {
     color: var(--color-description);
-
-    align-items: center;
     display: flex;
-
-    column-gap: 0.5rem;
 
     @include mixin.media("min", "md") {
       justify-content: center;
       text-align: center;
+      column-gap: 0.5rem;
       flex: 1;
     }
     @include mixin.media("max", "md") {
-      margin-bottom: 1rem;
+      flex-direction: column;
+      row-gap: 0.25rem;
       order: 1;
     }
 
     span {
-      align-items: center;
       display: flex;
 
-      column-gap: 0.25rem;
+      @include mixin.media("min", "md") {
+        align-items: center;
+        column-gap: 0.25rem;
+      }
 
       img {
         position: relative;
@@ -79,10 +79,19 @@ body > footer {
 
         border-radius: 50%;
 
+        min-height: 1.5rem;
+        max-height: 1.5rem;
         height: 1.5rem;
+
+        min-width: 1.5rem;
+        max-width: 1.5rem;
         width: 1.5rem;
 
         display: flex;
+
+        @include mixin.media("max", "md") {
+          display: none;
+        }
       }
     }
 
@@ -106,16 +115,17 @@ body > footer {
     position: relative;
 
     align-items: center;
-    column-gap: 1.5rem;
     flex-wrap: wrap;
     display: flex;
 
     @include mixin.media("min", "md") {
       justify-content: end;
+      column-gap: 1.5rem;
       flex: 1;
     }
     @include mixin.media("max", "md") {
-      order: 3;
+      column-gap: 1rem;
+      order: 2;
     }
 
     ul {
@@ -132,7 +142,8 @@ body > footer {
       margin-top: unset;
 
       align-items: center;
-      column-gap: 1.5rem;
+      column-gap: 1.25rem;
+      row-gap: 0.25rem;
       flex-wrap: wrap;
       display: flex;
 
