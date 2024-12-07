@@ -1,0 +1,66 @@
+@use "sass:color";
+@use "../_variables";
+@use "../_mixin";
+
+nav.pagination {
+  position: relative;
+
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+  display: flex;
+
+  @extend .inner;
+
+  a {
+    font-size: 1.125rem;
+    color: var(--color-description);
+
+    &.hover,
+    &:hover {
+      color: var(--color-link);
+    }
+
+    &:first-of-type {
+      text-align: left;
+    }
+    &:last-of-type {
+      text-align: right;
+    }
+  }
+}
+
+nav.post-pagination {
+  position: relative;
+  display: flex;
+
+  justify-content: space-between;
+  column-gap: 1rem;
+
+  @include mixin.media("min", "md") {
+    max-width: 4rem;
+  }
+  @include mixin.media("max", "md") {
+    margin-bottom: 2rem;
+  }
+
+  @extend .user-select-none;
+
+  a {
+    color: var(--color-description);
+
+    &.hover,
+    &:hover {
+      color: var(--color-link);
+    }
+
+    &:first-of-type {
+      margin-right: auto;
+      text-align: left;
+    }
+    &:last-of-type {
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+}

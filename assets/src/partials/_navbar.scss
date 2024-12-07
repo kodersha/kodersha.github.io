@@ -1,0 +1,92 @@
+@use "sass:color";
+@use "../_variables";
+@use "../_mixin";
+
+body > header {
+  position: relative;
+
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1.5rem;
+  display: flex;
+
+  @extend .fill-available;
+
+  logotype {
+    position: relative;
+    overflow: hidden;
+
+    align-items: center;
+    display: flex;
+
+    font-weight: 600;
+    font-size: 1.125rem;
+
+    @extend .user-select-none;
+
+    @include mixin.media("min", "md") {
+      column-gap: 1.5rem;
+    }
+    @include mixin.media("max", "md") {
+      column-gap: 0.5rem;
+    }
+
+    a {
+      &:first-of-type {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    
+        height: 3rem;
+        width: 3rem;
+      }
+
+      &.hover,
+      &:hover {
+        color: var(--color-link);
+      }
+    }
+
+    img {
+      @extend .pointer-events-none;
+
+      position: relative;
+      overflow: hidden;
+
+      display: block;
+
+      border-radius: 50%;
+      font-size: 0;
+
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  nav {
+    position: relative;
+
+    ul {
+      list-style: none;
+
+      align-items: center;
+      column-gap: 1rem;
+      display: flex;
+
+      li {
+        @extend .user-select-none;
+
+        font-size: 1.125rem;
+
+        a {
+          color: var(--body-text-color);
+
+          &.hover,
+          &:hover {
+            color: var(--color-link);
+          }
+        }
+      }
+    }
+  }
+}

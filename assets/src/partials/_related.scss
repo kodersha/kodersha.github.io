@@ -1,0 +1,19 @@
+@use "../_variables";
+
+section.related {
+  position: relative;
+
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+
+  @extend .fill-available;
+
+  & > * {
+    max-width: var(--wrapper);
+  }
+
+  a {
+    @extend .user-select-none;
+  }
+}

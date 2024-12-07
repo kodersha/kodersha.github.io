@@ -1,0 +1,212 @@
+@use "sass:color";
+@use "_mixin";
+
+$body-background-color:   #000000;
+$body-text-color:         #f7f7f5;
+
+$color-white:             #ffffff;
+$color-black:             #000000;
+
+$color-link:              #fac670;
+$color-link-hover:        #f37925;
+
+$color-description:       #949494;
+
+$code-background-color:   #0a0b0c;
+$code-text-color:         #ffffff;
+
+$color-mark:              #fdfa66;
+$color-line:              #0b0b0c;
+
+$color-sheet:             #18191a;
+
+$color-button:            #612bff;
+
+:root {
+  --font-family: "Tilda Sans", system-ui, -apple-system, BlinkMacSystemFont, "SF UI Text", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+  --wrapper: 55rem;
+  --inner: 75rem;
+
+  --body-background-color: #{$body-background-color};
+  --body-text-color: #{$body-text-color};
+
+  --body-margin: 2rem;
+
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+
+  --color-link: #{$color-link};
+  --color-link-hover: #{$color-link-hover};
+
+  --color-description: #{$color-description};
+
+  --code-background-color: #{$code-background-color};
+  --code-text-color: #{$code-text-color};
+
+  --color-mark: #{$color-mark};
+  --color-line: #{$color-line};
+
+  --color-sheet: #{$color-sheet};
+
+  --color-button: #{$color-button};
+
+  --border-radius: 0.5rem;
+
+  --main-gap: 10rem;
+  --gap: 2.5rem;
+
+  --article-font-size: 1.5rem;
+  --article-line-height: 1.5;
+
+  --article-title-font-weight: 700;
+  --article-title-font-size: 4.5rem;
+  --article-title-line-height: 1;
+
+  --article-item-padding: 1.25rem;
+  --article-margin: 2rem;
+
+  --small-font-size: 1.125rem;
+  --small-line-height: 1.5;
+
+  --teaser-margin: 1.5rem;
+
+  --time: .2s;
+}
+
+@include mixin.media("max", "md") {
+  :root {
+    --body-margin: 1rem;
+
+    --main-gap: 4rem;
+    --gap: 2rem;
+
+    --article-font-size: 1.25rem;
+    --article-line-height: 1.4;
+
+    --article-title-font-size: 2.25rem;
+    --article-title-line-height: 1.1;
+
+    --article-item-padding: 1rem;
+    --article-margin: 1.25rem;
+
+    --teaser-margin: 1.125rem;
+  }
+}
+
+/* Extended */
+
+.emerge {
+  opacity: 0;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.fill-available {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.fit-content {
+  width: intrinsic;
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  width: fit-content;
+}
+
+.inner {
+  max-width: var(--inner);
+  @extend .fill-available;
+}
+
+.wrapper {
+  max-width: var(--wrapper);
+  @extend .fill-available;
+}
+
+.user-select-none {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pointer-events-none {
+  -webkit-pointer-events: none;
+  -moz-pointer-events: none;
+  pointer-events: none;
+}
+
+.extend {
+  a {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: color.adjust($color-link, $alpha: -0.8);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25rem;
+    
+    color: var(--color-link);
+
+    &:hover,
+    &.hover {
+      text-decoration-color: color.adjust($color-link-hover, $alpha: -0.8);
+      color: var(--color-link-hover);
+    }
+  }
+
+  code {
+    background-color: var(--code-background-color);
+    border: 1px solid color.adjust($code-background-color, $lightness: 10%);
+    border-radius: 0.3125rem;
+    color: var(--code-text-color);
+
+    padding-bottom: unset;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+    padding-top: unset;
+
+    white-space: normal;
+    text-shadow: none;
+  }
+
+  em {
+    font-style: italic;
+  }
+}
+
+.tag-colors {
+  &.tag-archive {
+    color: rgb(255, 255, 255);
+  }
+  &.tag-movies {
+    color: rgb(196, 191, 49);
+  }
+  &.tag-games {
+    color: rgb(238, 123, 73);
+  }
+  &.tag-notes {
+    color: rgb(245, 92, 217);
+  }
+}
+
+.goo {
+  -webkit-filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><defs><filter id='goo'><feGaussianBlur in='SourceGraphic' stdDeviation='6' result='blur'></feGaussianBlur><feColorMatrix in='blur' mode='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9' result='goo'></feColorMatrix><feComposite in2='goo' in='SourceGraphic' operator='atop'></feComposite></filter></defs></svg>#goo");
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><defs><filter id='goo'><feGaussianBlur in='SourceGraphic' stdDeviation='6' result='blur'></feGaussianBlur><feColorMatrix in='blur' mode='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 19 -9' result='goo'></feColorMatrix><feComposite in2='goo' in='SourceGraphic' operator='atop'></feComposite></filter></defs></svg>#goo");
+
+  border-radius: var(--border-radius);
+}
+
+/* Animations */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
