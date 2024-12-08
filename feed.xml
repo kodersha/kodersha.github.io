@@ -47,7 +47,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/34/1.webp" height="1125" width="2000" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/34/1.webp" height="1125" width="2000" alt="" />
       <figcaption>Гостиница «Танцы в тряпье».</figcaption>
     </figure>
 
@@ -75,12 +75,12 @@
     <div class="gallery" data-columns="2">
       <figure class="gallery__item">
       <a href="https://kodersha.ru/media/posts/34/gallery/2.webp" data-size="2000x2775">
-        <img loading="lazy" src="https://kodersha.ru/media/posts/34/gallery/2.webp" height="2775" width="2000" alt="" />
+        <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/34/gallery/2.webp" height="2775" width="2000" alt="" />
       </a>
       
     </figure><figure class="gallery__item">
       <a href="https://kodersha.ru/media/posts/34/gallery/3.webp" data-size="2000x2775">
-        <img loading="lazy" src="https://kodersha.ru/media/posts/34/gallery/3.webp" height="2775" width="2000" alt="" />
+        <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/34/gallery/3.webp" height="2775" width="2000" alt="" />
       </a>
       
     </figure>
@@ -96,7 +96,7 @@
   </p>
 
     <figure class="post__image post__image--full">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/34/4.webp" height="1125" width="2000" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/34/4.webp" height="1125" width="2000" alt="" />
       <figcaption>Детектив Кусто и его обаятельный напарник. Набережная в восточной части Мартинеза — одного из районов Ревашоля.</figcaption>
     </figure>
 
@@ -117,12 +117,12 @@
     <div class="gallery" data-columns="2">
       <figure class="gallery__item">
       <a href="https://kodersha.ru/media/posts/34/gallery/5.webp" data-size="488x427">
-        <img loading="lazy" src="https://kodersha.ru/media/posts/34/gallery/5.webp" height="427" width="488" alt="" />
+        <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/34/gallery/5.webp" height="427" width="488" alt="" />
       </a>
       
     </figure><figure class="gallery__item">
       <a href="https://kodersha.ru/media/posts/34/gallery/6.webp" data-size="190x350">
-        <img loading="lazy" src="https://kodersha.ru/media/posts/34/gallery/6.webp" height="350" width="190" alt="" />
+        <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/34/gallery/6.webp" height="350" width="190" alt="" />
       </a>
       
     </figure>
@@ -146,7 +146,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/34/7.webp" height="1125" width="2000" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/34/7.webp" height="1125" width="2000" alt="" />
       <figcaption>Квартиры жилого комплекса «Кейпсайд».</figcaption>
     </figure>
 
@@ -172,7 +172,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/34/8.webp" height="1125" width="2000" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/34/8.webp" height="1125" width="2000" alt="" />
       <figcaption>Одинокий таксофон в западной части Мартинеза.</figcaption>
     </figure>
 
@@ -221,7 +221,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/33/1.png" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/33/1.png" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -239,7 +239,7 @@
   </p>
 
     <figure class="post__image post__image--full">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/33/2.png" height="804" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/33/2.png" height="804" width="1920" alt="" />
       
     </figure>
 
@@ -253,7 +253,7 @@
 <hr class="separator separator--dots" />
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/33/3.png" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/33/3.png" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -271,7 +271,7 @@
 <hr class="separator separator--dots" />
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/33/5.png" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/33/5.png" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -288,7 +288,7 @@
   </p>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/33/6.png" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/33/6.png" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -341,7 +341,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/32/1.jpg" height="768" width="1366" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/32/1.jpg" height="768" width="1366" alt="" />
       
     </figure>
 
@@ -351,7 +351,7 @@
 <hr class="separator separator--dots" />
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/32/2.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/32/2.jpg" height="1080" width="1920" alt="" />
       <figcaption>Скриншот из Steam сообщества.</figcaption>
     </figure>
 
@@ -365,7 +365,7 @@
 <hr class="separator separator--dots" />
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/32/3.jpg" height="576" width="1024" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/32/3.jpg" height="576" width="1024" alt="" />
       
     </figure>
 
@@ -387,7 +387,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/32/5.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/32/5.jpg" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -397,7 +397,7 @@
 <hr class="separator separator--dots" />
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/32/4.jpg" height="720" width="1280" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/32/4.jpg" height="720" width="1280" alt="" />
       
     </figure>
 
@@ -446,7 +446,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/31/1.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/31/1.jpg" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -531,7 +531,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/29/1.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/29/1.jpg" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -544,7 +544,7 @@
   </p>
 
     <figure class="post__image post__image--full">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/29/2.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/29/2.jpg" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -589,7 +589,7 @@
   </p>
 
     <figure class="post__image post__image--full">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/28/1.jpg" height="810" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/28/1.jpg" height="810" width="1920" alt="" />
       
     </figure>
 
@@ -605,12 +605,12 @@
     <div class="gallery" data-columns="2">
       <figure class="gallery__item">
       <a href="https://kodersha.ru/media/posts/28/gallery/2.jpg" data-size="1920x1080">
-        <img loading="lazy" src="https://kodersha.ru/media/posts/28/gallery/2.jpg" height="1080" width="1920" alt="" />
+        <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/28/gallery/2.jpg" height="1080" width="1920" alt="" />
       </a>
       
     </figure><figure class="gallery__item">
       <a href="https://kodersha.ru/media/posts/28/gallery/3.jpg" data-size="1920x1080">
-        <img loading="lazy" src="https://kodersha.ru/media/posts/28/gallery/3.jpg" height="1080" width="1920" alt="" />
+        <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/28/gallery/3.jpg" height="1080" width="1920" alt="" />
       </a>
       
     </figure>
@@ -626,7 +626,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/28/4.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/28/4.jpg" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -667,7 +667,7 @@
   </p>
 
     <figure class="post__image post__image--center">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/27/1.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/27/1.jpg" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -684,7 +684,7 @@
   </p>
 
     <figure class="post__image post__image--full">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/27/2.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/27/2.jpg" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -701,7 +701,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/27/3.jpg" height="931" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/27/3.jpg" height="931" width="1920" alt="" />
       
     </figure>
 
@@ -714,7 +714,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/27/4.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/27/4.jpg" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -783,7 +783,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/25/1.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/25/1.jpg" height="1080" width="1920" alt="" />
       
     </figure>
 
@@ -799,12 +799,12 @@
     <div class="gallery" data-columns="2">
       <figure class="gallery__item">
       <a href="https://kodersha.ru/media/posts/25/gallery/2.jpg" data-size="1920x1080">
-        <img loading="lazy" src="https://kodersha.ru/media/posts/25/gallery/2.jpg" height="1080" width="1920" alt="" />
+        <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/25/gallery/2.jpg" height="1080" width="1920" alt="" />
       </a>
       
     </figure><figure class="gallery__item">
       <a href="https://kodersha.ru/media/posts/25/gallery/3.jpg" data-size="1920x1080">
-        <img loading="lazy" src="https://kodersha.ru/media/posts/25/gallery/3.jpg" height="1080" width="1920" alt="" />
+        <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/25/gallery/3.jpg" height="1080" width="1920" alt="" />
       </a>
       
     </figure>
@@ -820,7 +820,7 @@
   </p>
 
     <figure class="post__image post__image--wide">
-      <img loading="lazy" src="https://kodersha.ru/media/posts/25/4.jpg" height="1080" width="1920" alt="" />
+      <img decoding="async" loading="lazy" src="https://kodersha.ru/media/posts/25/4.jpg" height="1080" width="1920" alt="" />
       
     </figure>
 
