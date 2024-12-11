@@ -590,11 +590,9 @@ article.post {
       margin-left: unset;
       margin-top: unset;
 
-      font-size: 1.25rem;
-      font-style: italic;
-      font-weight: 500;
-
-      line-height: 1.2;
+      font-size: var(--article-medium-font-size);
+      font-weight: normal;
+      line-height: var(--article-medium-line-height);
     }
   }
 
