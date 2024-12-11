@@ -53,6 +53,7 @@ $color-button:            #612bff;
 
   --border-radius: 0.5rem;
 
+  --homepage-gap: 2.5rem;
   --main-gap: 10rem;
   --gap: 2.5rem;
 
@@ -72,6 +73,7 @@ $color-button:            #612bff;
   --teaser-margin: 1.5rem;
 
   --time: .2s;
+  --app-height: 100vh;
 }
 
 @include mixin.media("max", "md") {
