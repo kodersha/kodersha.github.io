@@ -35,10 +35,6 @@ body {
   display: flex;
 
   overflow-x: hidden;
-
-  &.homepage {
-    row-gap: var(--homepage-gap);
-  }
 }
 
 ::selection {
@@ -194,10 +190,10 @@ article.homepage {
   }
 
   @include mixin.media("min", "md") {
-    min-height: calc(var(--app-height) - calc(var(--homepage-gap) + var(--homepage-gap) + 7.375rem));
+    min-height: calc(var(--app-height) - calc(var(--main-gap) + var(--main-gap) + 7.375rem));
   }
   @include mixin.media("max", "md") {
-    min-height: calc(var(--app-height) - calc(var(--homepage-gap) + var(--homepage-gap) + 9.5625rem));
+    min-height: calc(var(--app-height) - calc(var(--main-gap) + var(--main-gap) + 9.5625rem));
   }
 
   p {
