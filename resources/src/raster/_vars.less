@@ -1,0 +1,74 @@
+@desktop-size: 1520px;
+@mobile-size: 1023px;
+
+:root {
+  --fontSize: 12px;
+  --fontSize: calc(100vw / 80);
+  --fontWeight: 400;
+}
+
+@media only screen and (max-width: @mobile-size) {
+  :root {
+    --fontSize: calc(100vw / 25);
+  }
+}
+
+:root {
+  --sansFont: -apple-system, BlinkMacSystemFont, San Francisco, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Segoe UI, Fira Sans, Roboto, Oxygen, Ubuntu, Droid Sans, Arial, sans-serif;
+  --monoFont: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+
+  --lineHeight: calc(var(--fontSize) * 1.5);
+
+  --baseline: calc(var(--lineHeight) / 2);
+
+  --blockSpacingTop: 0;
+  --blockSpacingBottom: 1.5rem;
+
+  --hrThickness: 2px;
+
+  --h1-size: 2rem;
+  --h2-size: 1.5rem;
+  --h3-size: 1.2rem;
+  --h4-size: 1rem;
+
+  --columnGap: calc(var(--lineHeight) * 2);
+  --rowGap: var(--lineHeight);
+
+  --displayScale: 1;
+  --pixel: 1px;
+
+  --foreground-color-rgb: 255, 255, 255;
+  --foreground-color-a: 1;
+  --foreground-color: rgba(var(--foreground-color-rgb), var(--foreground-color-a));
+  --background-color: rgb(14, 14, 16);
+
+  --linkBorderColor: rgba(255, 255, 255, 0.6);
+  --linkBorderColorHover: rgba(0, 87, 255, 0.3);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
+  :root {
+    --displayScale: 2;
+    --pixel: 0.5px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.5),
+only screen and (min-device-pixel-ratio: 2.5),
+only screen and (min-resolution: 2.5dppx) {
+  :root {
+    --displayScale: 3;
+    --pixel: 0.34px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3.5),
+only screen and (min-device-pixel-ratio: 3.5),
+only screen and (min-resolution: 3.5dppx) {
+  :root {
+    --displayScale: 4;
+    --pixel: 0.25px;
+  }
+}

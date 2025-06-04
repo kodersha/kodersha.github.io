@@ -1,0 +1,208 @@
+.grid-settings() {
+  @grid-columns: 12;
+  @gutter-width: 30px;
+
+  @breakpoints: ~"(min-width: 768px)", ~"(min-width: 992px)", ~"(min-width: 1200px)";
+
+  @container-maw: 750px, 970px, 1170px;
+  @suffixes: xs, sm, md, lg;
+
+}
+
+@grid-render: {
+  @gutter-compensation: ((@gutter-width * 0.5) * -1);
+  @half-gutter-width: ((@gutter-width) * 0.5);
+  @n: length(@breakpoints);
+  @m: length(@suffixes);
+  @first-suffix: extract(@suffixes, 1);
+
+  .flex-grid-columns(@class) {
+    .col(@index) {
+      @item: ~".col-@{class}-@{index}";
+      .col((@index + 1), @item);
+    }
+
+    .col(@index, @list) when (@index =< @grid-columns) {
+      @item: ~".col-@{class}-@{index}";
+      .col((@index + 1), ~"@{list}, @{item}");
+    }
+
+    .col(@index, @list) when (@index > @grid-columns) {
+      @{list},
+      .col-@{class}-shrink,
+      .col-@{class}-min,
+      .col-@{class} {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        padding-right: @half-gutter-width;
+        padding-left: @half-gutter-width;
+      }
+    }
+
+    .col(1);
+  }
+
+  .calc-grid-column(@index, @class, @type) when (@type =width) and (@index > 0) {
+    .col-@{class}-@{index} {
+      flex-basis: percentage((@index / @grid-columns));
+      max-width: percentage((@index / @grid-columns));
+    }
+  }
+
+  .calc-grid-column(@index, @class, @type) when (@type =offset) {
+    .col-@{class}-offset-@{index} {
+      margin-left: percentage((@index / @grid-columns));
+    }
+  }
+
+  .loop-grid-columns(@index, @class, @type) when (@index >=0) {
+    .loop-grid-columns((@index - 1), @class, @type);
+    .calc-grid-column(@index, @class, @type);
+  }
+
+  .make-grid(@class) {
+    .flex-grid-columns(@class);
+    .loop-grid-columns(@grid-columns, @class, width);
+    .loop-grid-columns(@grid-columns, @class, offset);
+    .col-modifiers(@class);
+  }
+
+  .row-modifiers(@class) {
+    .row {
+      &-reverse-@{class} {
+        flex-direction: row-reverse;
+      }
+
+      &-start-@{class} {
+        justify-content: flex-start;
+      }
+
+      &-center-@{class} {
+        justify-content: center;
+      }
+
+      &-end-@{class} {
+        justify-content: flex-end;
+      }
+
+      &-top-@{class} {
+        align-items: flex-start;
+      }
+
+      &-middle-@{class} {
+        align-items: center;
+      }
+
+      &-bottom-@{class} {
+        align-items: flex-end;
+      }
+
+      &-around-@{class} {
+        justify-content: space-around;
+      }
+
+      &-between-@{class} {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .col-modifiers(@class) {
+    .col {
+      &-@{class} {
+        flex-grow: 1;
+        flex-basis: 0%;
+        max-width: 100%;
+        min-width: 0;
+      }
+
+      &-@{class}-shrink {
+        flex-grow: 0;
+        flex-basis: auto;
+        max-width: 100%;
+        min-width: 0;
+      }
+
+      &-@{class}-min {
+        flex-grow: 0;
+        flex-basis: 0%;
+        max-width: 100%;
+        min-width: 0;
+      }
+
+      &-first-@{class} {
+        order: -1;
+      }
+
+      &-last-@{class} {
+        order: 1;
+      }
+
+      &-flex-@{class} {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  }
+
+  .grow-modifiers(@class) {
+    .flex-grow-@{class} {
+      flex-grow: 1;
+    }
+  }
+
+  .responsive(@index: @m) when (@index > 1) and (@m =(@n + 1)) {
+    .responsive((@index - 1));
+    @current-class: extract(@suffixes, @index);
+    @current-breakpoint: extract(@breakpoints, (@index - 1));
+
+    @media @current-breakpoint {
+
+      .container {
+        max-width: extract(@container-maw, (@index - 1));
+      }
+
+      .row-modifiers(@current-class);
+      .make-grid(@current-class);
+      .grow-modifiers(@current-class);
+    }
+  }
+
+  .grid-settings();
+
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+
+    &-fluid {
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: @half-gutter-width;
+      padding-left: @half-gutter-width;
+    }
+  }
+
+  .row {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: @gutter-compensation;
+    margin-left: @gutter-compensation;
+    height: 100%;
+
+    &[class*="col-"] {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .row-modifiers(@first-suffix);
+  .make-grid(@first-suffix);
+  .grow-modifiers(@first-suffix);
+  .responsive();
+}
+
+@grid-render();
