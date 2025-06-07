@@ -10,6 +10,10 @@ $(document).ready(function(){
   });
 
   $('.slider').on('wheel', function(e){
+    if (/Mobi|Android|Touch|Tablet|iPad|iPhone/i.test(navigator.userAgent)) {
+      return;
+    }
+
     e.preventDefault();
 
     if (e.originalEvent.deltaY < 0) {
