@@ -5,29 +5,30 @@ $(document).ready(function(){
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
-    prevArrow: '',
-    nextArrow: ''
+    prevArrow: $('.section-control .prev'),
+    nextArrow: $('.section-control .next'),
+    speed: 100
   });
 
-  $('.slider').on('wheel', function(e){
-    if (/Mobi|Android|Touch|Tablet|iPad|iPhone/i.test(navigator.userAgent)) {
-      return;
-    }
+  // $('.slider').on('wheel', function(e){
+  //   if (/Mobi|Android|Touch|Tablet|iPad|iPhone/i.test(navigator.userAgent)) {
+  //     return;
+  //   }
 
-    e.preventDefault();
+  //   e.preventDefault();
 
-    if (e.originalEvent.deltaY < 0) {
-      $(this).slick('slickPrev');
-    } else {
-      $(this).slick('slickNext');
-    }
-  });
+  //   if (e.originalEvent.deltaY < 0) {
+  //     $(this).slick('slickPrev');
+  //   } else {
+  //     $(this).slick('slickNext');
+  //   }
+  // });
 
-  $('.slider').on('afterChange', function(event, slick, currentSlide){
-    $('.slider a').each(function(){
-      this.style.display = 'none';
-      this.offsetHeight;
-      this.style.display = '';
-    });
-  });
+  // $('.slider').on('afterChange', function(event, slick, currentSlide){
+  //   $('.slider a').each(function(){
+  //     this.style.display = 'none';
+  //     this.offsetHeight;
+  //     this.style.display = '';
+  //   });
+  // });
 });

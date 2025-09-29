@@ -1,11 +1,17 @@
-@color-link:        rgb(234, 104, 64);
-@color-link-hover:  rgb(194, 52, 41);
-@color-highlight:   rgb(233, 84, 51);
-@color-gray:        rgb(185, 179, 175);
+@color-link: rgb(234, 104, 64);
+@color-link-hover: rgb(194, 52, 41);
+@color-highlight: rgb(233, 84, 51);
+@color-gray: rgb(185, 179, 175);
+@color-mark: rgb(253, 250, 102);
 
 :root {
-  --sansFont: 'Tilda Sans', -apple-system, BlinkMacSystemFont, San Francisco, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Segoe UI, Fira Sans, Roboto, Oxygen, Ubuntu, Droid Sans, Arial, sans-serif;
-  --monoFont: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+  --sansFont: "Tilda Sans", -apple-system, BlinkMacSystemFont, San Francisco,
+    HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Segoe UI,
+    Fira Sans, Roboto, Oxygen, Ubuntu, Droid Sans, Arial, sans-serif;
+  --monoFont: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
+    "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
+    "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier,
+    monospace;
 
   --fontSize: calc(100vw / 70);
   --fontWeight: 400;
@@ -25,9 +31,9 @@
 
   /* heading size */
   --h1-size: 3rem;
-  --h2-size: 1.5rem;
-  --h3-size: 1.2rem;
-  --h4-size: 1rem;
+  --h2-size: 2rem;
+  --h3-size: 1.5rem;
+  --h4-size: 1.125rem;
 
   /* grid spacing */
   --columnGap: calc(var(--lineHeight) * 2);
@@ -39,14 +45,18 @@
 
   /* Colors */
   --foreground-color-rgb: 255, 255, 255;
-  --foreground-color-a:   1;
-  --foreground-color:     rgba(var(--foreground-color-rgb), var(--foreground-color-a));
-  --background-color:     rgb(0, 0, 0);
+  --foreground-color-a: 1;
+  --foreground-color: rgba(
+    var(--foreground-color-rgb),
+    var(--foreground-color-a)
+  );
+  --background-color: rgb(0, 0, 0);
 
   --color-link: @color-link;
   --color-link-hover: @color-link-hover;
 
   --color-gray: @color-gray;
+  --color-mark: @color-mark;
 
   --border-radius: 0.25rem;
 }
