@@ -213,6 +213,13 @@ mark {
   blockquote {
     position: relative;
 
+    margin-top: var(--blockSpacingTop);
+    margin-bottom: calc(var(--blockSpacingBottom) * 1.5);
+
+    &:last-of-type {
+      margin-bottom: unset;
+    }
+
     & > * {
       margin-top: var(--blockSpacingTop);
       margin-bottom: calc(var(--blockSpacingBottom) - 0.125rem);
