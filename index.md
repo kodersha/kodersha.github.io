@@ -3,8 +3,6 @@ layout: default
 title: Заметки
 ---
 
-# Заметки
-
 <ul>
 {% for p in site.pages %}
   {% if p.path contains 'posts/' and p.extname == '.md' %}
