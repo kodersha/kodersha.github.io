@@ -10,3 +10,11 @@ title: Заметки
   {% endif %}
 {% endfor %}
 </ul>
+
+
+<h3>Отладка</h3>
+<ul>
+{% for p in site.pages %}
+  <li>path: {{ p.path }} | dir: {{ p.dir }} | url: {{ p.url }}</li>
+{% endfor %}
+</ul>
