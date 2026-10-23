@@ -7,7 +7,7 @@ title: Заметки
 
 <ul>
 {% for p in site.pages %}
-  {% if p.path contains 'notes/' and p.extname == '.md' %}
+  {% if p.path contains 'posts/' and p.extname == '.md' %}
   <li><a href="{{ p.url | relative_url }}">{{ p.title | default: p.name }}</a></li>
   {% endif %}
 {% endfor %}
