@@ -8,6 +8,6 @@ title: Заметки
 {% for p in notes %}
 <article class="post">
   {{ p.content | markdownify }}
-  <div class="meta"><a href="{{ p.url | relative_url }}">№ {{ p.basename }}</a></div>
+  <div class="meta"><a href="{{ p.url | relative_url }}">{{ p.title | default: p.basename }}</a></div>
 </article>
 {% endfor %}
