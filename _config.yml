@@ -1,13 +1,17 @@
-theme: jekyll-theme-minimal
 title: Сайт
 description: Сайт
 plugins:
-  - jekyll-optional-front-matter   # обрабатывать md без шапки ---
-  - jekyll-titles-from-headings    # заголовок страницы из первого # 
-  - jekyll-relative-links          # работают ссылки между md-файлами
+  - jekyll-optional-front-matter
+  - jekyll-titles-from-headings
+  - jekyll-relative-links
 optional_front_matter:
   remove_originals: true
 titles_from_headings:
   enabled: true
   strip_title: true
   collections: false
+defaults:
+  - scope:
+      path: "posts"
+    values:
+      layout: default
