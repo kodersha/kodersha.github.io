@@ -1,0 +1,15 @@
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Obsidian transient state (keep app.json and other shared settings)
+content/.obsidian/workspace.json
+content/.obsidian/workspace-mobile.json
+content/.obsidian/cache/
+content/.obsidian/plugins/
+
+# Build output
+public/
+quartz/
+node_modules/
